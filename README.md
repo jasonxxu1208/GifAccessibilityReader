@@ -78,7 +78,6 @@ Create and activate a Python virtual environment (recommended):
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 Install dependencies: pip install -r requirements.txt
-```bash
 Run one backend at a time:
 **Run BLIP (default, recommended)**
 uvicorn api_blip:app --reload
