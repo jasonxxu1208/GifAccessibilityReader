@@ -131,10 +131,12 @@ Upload a GIF or MP4 file to generate captions using the currently running backen
 - Fastest runtime
 - Best suited for live accessibility use
 - Limited understanding of motion and embedded text
+
 **MobileCLIP**
 - Produces object-level labels only
 - Not suitable for caption generation
 - Included as a comparison baseline
+
 **BLIP-2**
 - Produces the most detailed captions
 - Better at motion and emotion understanding
