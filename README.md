@@ -50,7 +50,7 @@ Model selection is done **at backend startup**, not in the frontend.
 
 ---
 
-## Model Weights (Important)
+## Model Weights
 
 ### MobileCLIP model weights are NOT included in this repository
 
@@ -97,9 +97,45 @@ The backend will run at: http://127.0.0.1:8000
 ### 2. Chrome Extension
 
 Open Chrome
-Go to: chrome://extensions
-Enable Developer mode
-Click Load unpacked
-Select: submission/GifBrowserExtension
+Go to:
+chrome://extensions
+Enable Developer mode(top right).
+Click Load unpacked and select:
+submission/GifBrowserExtension
 Visit a webpage with GIFs (e.g., Twitter, Reddit)
 Captions will be injected automatically
+
+### 3. TestBench Web App
+
+Navigate to the TestBench folder:
+```
+cd submission/GifTestBenchWebApp
+```
+Install dependencies:
+```
+npm install
+```
+Start the development server:
+```
+npm start
+```
+Open the local URL shown in the terminal (typically):
+```
+http://localhost:3000
+```
+Upload a GIF or MP4 file to generate captions using the currently running backend model.
+
+## Evaluation Summary
+
+**BLIP**
+- Fastest runtime
+- Best suited for live accessibility use
+- Limited understanding of motion and embedded text
+**MobileCLIP**
+- Produces object-level labels only
+- Not suitable for caption generation
+- Included as a comparison baseline
+**BLIP-2**
+- Produces the most detailed captions
+- Better at motion and emotion understanding
+- Computationally expensive on CPU
