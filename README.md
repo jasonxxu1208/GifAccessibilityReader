@@ -74,37 +74,32 @@ After downloading, place the model file here: submission/models/mobileclip_s0.pt
 
 Create and activate a Python virtual environment (recommended):
 
-```bash
+```
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 Install dependencies: pip install -r requirements.txt
+```
 Run one backend at a time:
 **Run BLIP (default, recommended)**
+```
 uvicorn api_blip:app --reload
+```
 **Run MobileCLIP**
+```
 uvicorn api_mobileclip:app --reload
+```
 **Run BLIP-2**
+```
 uvicorn api_blip2:app --reload
+```
 The backend will run at: http://127.0.0.1:8000
 
 ### 2. Chrome Extension
 
 Open Chrome
-
-Go to:
-
-chrome://extensions
-
-
+Go to: chrome://extensions
 Enable Developer mode
-
 Click Load unpacked
-
-Select:
-
-submission/GifBrowserExtension
-
-
+Select: submission/GifBrowserExtension
 Visit a webpage with GIFs (e.g., Twitter, Reddit)
-
 Captions will be injected automatically
